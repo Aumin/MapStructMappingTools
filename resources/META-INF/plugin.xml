@@ -1,0 +1,103 @@
+<idea-plugin>
+  <id>MapStructMappingTool</id>
+  <name>MapStructMappingTool</name>
+  <version>1.0</version>
+  <vendor email="wutailong11062@hellobike.com" url="">wutailong</vendor>
+
+  <description><![CDATA[
+      这将帮助你快速且便利的获取到对象->对象的映射关系，并且生成MapStruct对应的字段映射代码
+      <br/>github：<a href="https://github.com/fuzhengwei/vo2dto">https://github.com/fuzhengwei/vo2dto</a>
+      <br/>video：<a href="https://youtu.be/HOlNi2b0oXI">https://youtu.be/HOlNi2b0oXI</a>
+      <br/>Bilibili：<a href="https://www.bilibili.com/video/BV13Y411h7fv">https://www.bilibili.com/video/BV13Y411h7fv</a>
+      <br/>help doc：<a href="https://github.com/fuzhengwei/vo2dto/wiki">https://github.com/fuzhengwei/vo2dto/wiki</a><br>
+      <ul>
+          <li>Usage: copy the object first, for example: A, a, and then place the cursor on the object to be woven, for example: B, b Generate -> vo2dto</li>
+          <li>Usage scenarios: for some scenarios that are not suitable for using mapstruct to write mapping classes and do not want a lot of handwritten conversion code</li>
+          <li>Usage reminder: by detecting @ data annotation, integrate Lombok generation strategy, or create get and set methods</li>
+      </ul>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <h3>V2.1.0</h3>
+      <ul>
+          <li>Copy object a and generate x.set (y.get) on object B </li>
+          <li>On the object B attribute, you can also directly click to generate x.set (y.get) </li>
+          <li>Supports methods for generating parent objects</li>
+      </ul>
+      <h3>V2.2.0</h3>
+      <ul>
+          <li>Support Lombok generation strategy</li>
+          <li>Object null conversion is supported</li>
+          <li>Add custom get and set methods in compatible Lombok</li>
+      </ul>
+      <h3>V2.2.2</h3>
+      <ul>
+          <li>Compatible method repair</li>
+      </ul>
+      <h3>V2.3.0</h3>
+      <ul>
+          <li>Vo2Dto Convert Settings UI</li>
+      </ul>
+      <h3>V2.4.0</h3>
+      <ul>
+          <li>Optimize selection mapping relationship</li>
+          <li>Provide form presentation configuration</li>
+      </ul>
+      <h3>V2.4.1</h3>
+      <ul>
+          <li>fix tool config vo2dto</li>
+      </ul>
+      <h3>V2.4.2</h3>
+      <ul>
+          <li>feat table check box</li>
+      </ul>
+      <h3>V2.4.3</h3>
+      <ul>
+          <li>verify the context of the copied object and find the matching class</li>
+      </ul>
+      <h3>V2.4.4</h3>
+      <ul>
+          <li>Support to find similar names under multiple packages</li>
+      </ul>
+      <h3>V2.4.5</h3>
+      <ul>
+          <li>fix Support to find similar names under multiple packages</li>
+      </ul>
+      <h3>V2.4.6</h3>
+      <ul>
+          <li>If it is a field of final type, it will not be processed</li>
+          <li>copy Object in globalSearch by all scope</li>
+      </ul>
+      <h3>V2.4.7</h3>
+      <ul>
+          <li>Conversion object attribute value search</li>
+          <li>fix copy Object in globalSearch by all scope</li>
+      </ul>
+      <h3>V2.4.8</h3>
+      <ul>
+          <li>Static final constant judgment filtering</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
+
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="MapStructMappingID" class="MapStructMappingToolsAction" text="MapStructMappingTool"
+            description="MapStruct代码映射工具" icon="/META-INF/icon.svg">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift meta M"/>
+    </action>
+  </actions>
+
+
+</idea-plugin>
