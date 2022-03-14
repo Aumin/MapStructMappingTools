@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>MapStructMappingTool</id>
   <name>MapStructMappingTool</name>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <vendor email="wutailong11062@hellobike.com" url="">wutailong</vendor>
 
   <description><![CDATA[
@@ -24,6 +24,8 @@
   <change-notes><![CDATA[
       <h3>V1.0.0</h3>
       <br/>内测版本发布<br>
+      <h3>V1.0.1</h3>
+      <br/>修改源码地址<br>
     ]]>
   </change-notes>
 
