@@ -1,5 +1,3 @@
-# :currency_exchange: IDEA Plugin MapStructMappingTool
-
 <h1> MapStructMappingTool IDEA Plugin 使用指南</h1>
 
 这将帮助你快速且便利的获取到对象->对象的映射关系，并且生成MapStruct对应的字段映射代码
