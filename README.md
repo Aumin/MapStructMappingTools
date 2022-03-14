@@ -1,7 +1,7 @@
 <h1> MapStructMappingTool IDEA Plugin 使用指南</h1>
 
 这将帮助你快速且便利的获取到对象->对象的映射关系，并且生成MapStruct对应的字段映射代码
-<br/>github：<a href="https://github.com/fuzhengwei/vo2dto"> </a>
+<br/>github：<a href="https://github.com/Aumin/MapStructMappingTools">https://github.com/Aumin/MapStructMappingTools</a>
 <br/>help doc：详见README.md<br>
 <ul>
 <li>使用方式: 在标注了是MapperStruct维护的映射类中双击需要映射的方法然后鼠标右键选择弹出的MapStructMappingTool功能栏，即可弹出sourceObject和targetObject的类字段树，手动指明字段的映射关系，映射完毕后点击output按钮将自动生成的映射代码输出到对应的映射方法上方</li>

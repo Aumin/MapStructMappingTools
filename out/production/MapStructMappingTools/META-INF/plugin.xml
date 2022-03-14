@@ -5,78 +5,25 @@
   <vendor email="wutailong11062@hellobike.com" url="">wutailong</vendor>
 
   <description><![CDATA[
-      Batch weave "x.set (y.get)" code into the selected objects to help developers automatically generate vo2dto conversion code.
-      <br/>github：<a href="https://github.com/fuzhengwei/vo2dto">https://github.com/fuzhengwei/vo2dto</a>
-      <br/>video：<a href="https://youtu.be/HOlNi2b0oXI">https://youtu.be/HOlNi2b0oXI</a>
-      <br/>Bilibili：<a href="https://www.bilibili.com/video/BV13Y411h7fv">https://www.bilibili.com/video/BV13Y411h7fv</a>
-      <br/>help doc：<a href="https://github.com/fuzhengwei/vo2dto/wiki">https://github.com/fuzhengwei/vo2dto/wiki</a><br>
+      这将帮助你快速且便利的获取到对象->对象的映射关系，并且生成MapStruct对应的字段映射代码
+      <br/>github：<a href="https://github.com/fuzhengwei/vo2dto"> </a>
+      <br/>help doc：详见README.md<br>
       <ul>
-          <li>Usage: copy the object first, for example: A, a, and then place the cursor on the object to be woven, for example: B, b Generate -> vo2dto</li>
-          <li>Usage scenarios: for some scenarios that are not suitable for using mapstruct to write mapping classes and do not want a lot of handwritten conversion code</li>
-          <li>Usage reminder: by detecting @ data annotation, integrate Lombok generation strategy, or create get and set methods</li>
+          <li>使用方式: 在标注了是MapperStruct维护的映射类中双击需要映射的方法然后鼠标右键选择弹出的MapStructMappingTool功能栏，即可弹出sourceObject和targetObject的类字段树，手动指明字段的映射关系，映射完毕后点击output按钮将自动生成的映射代码输出到对应的映射方法上方</li>
+          <li>使用场景: 需要维护MapStruct映射类时，需要手动编写字段映射关系，它或许能帮助你更便利或者更舒服的去做这些工作，
+              特别一些场景：
+              1.遇到字段含义相同但是字段命名不一样的情况我们需要在对应的类文件中来回跳转确认字段名，在回到映射维护类编写类似"@Mapping(source = "xxx", target = "xxx")的代码；
+              2.有很多字段需要你去编写映射关系，映射的目标属性和源属性的命名是一样，但是对应的字段层级所处位置较深，这时我们还要额外注意对应的层级关系是否正确
+              3.你的项目中可能强制不使用MapStruct的隐式装换能力
+          </li>
+          <li>使用注意事项: by detecting @ data annotation, integrate Lombok generation strategy, or create get and set methods</li>
       </ul>
+      <br/>最后：如果遇到使用问题请联系本人，email="wutailong11062@hellobike.com"<br>
     ]]></description>
 
   <change-notes><![CDATA[
-      <h3>V2.1.0</h3>
-      <ul>
-          <li>Copy object a and generate x.set (y.get) on object B </li>
-          <li>On the object B attribute, you can also directly click to generate x.set (y.get) </li>
-          <li>Supports methods for generating parent objects</li>
-      </ul>
-      <h3>V2.2.0</h3>
-      <ul>
-          <li>Support Lombok generation strategy</li>
-          <li>Object null conversion is supported</li>
-          <li>Add custom get and set methods in compatible Lombok</li>
-      </ul>
-      <h3>V2.2.2</h3>
-      <ul>
-          <li>Compatible method repair</li>
-      </ul>
-      <h3>V2.3.0</h3>
-      <ul>
-          <li>Vo2Dto Convert Settings UI</li>
-      </ul>
-      <h3>V2.4.0</h3>
-      <ul>
-          <li>Optimize selection mapping relationship</li>
-          <li>Provide form presentation configuration</li>
-      </ul>
-      <h3>V2.4.1</h3>
-      <ul>
-          <li>fix tool config vo2dto</li>
-      </ul>
-      <h3>V2.4.2</h3>
-      <ul>
-          <li>feat table check box</li>
-      </ul>
-      <h3>V2.4.3</h3>
-      <ul>
-          <li>verify the context of the copied object and find the matching class</li>
-      </ul>
-      <h3>V2.4.4</h3>
-      <ul>
-          <li>Support to find similar names under multiple packages</li>
-      </ul>
-      <h3>V2.4.5</h3>
-      <ul>
-          <li>fix Support to find similar names under multiple packages</li>
-      </ul>
-      <h3>V2.4.6</h3>
-      <ul>
-          <li>If it is a field of final type, it will not be processed</li>
-          <li>copy Object in globalSearch by all scope</li>
-      </ul>
-      <h3>V2.4.7</h3>
-      <ul>
-          <li>Conversion object attribute value search</li>
-          <li>fix copy Object in globalSearch by all scope</li>
-      </ul>
-      <h3>V2.4.8</h3>
-      <ul>
-          <li>Static final constant judgment filtering</li>
-      </ul>
+      <h3>V1.0.0</h3>
+      <br/>内测版本发布<br>
     ]]>
   </change-notes>
 
