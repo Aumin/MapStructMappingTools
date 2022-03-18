@@ -5,27 +5,27 @@
   <vendor email="wutailong11062@hellobike.com" url="">wutailong</vendor>
 
   <description><![CDATA[
-      这将帮助你快速且便利的获取到对象->对象的映射关系，并且生成MapStruct对应的字段映射代码
+      This will help you get the object->object mapping relationship quickly and conveniently, and generate the field mapping code corresponding to MapStruct.
       <br/>github：<a href="https://github.com/Aumin/MapStructMappingTools">https://github.com/Aumin/MapStructMappingTools</a>
-      <br/>help doc：详见README.md<br>
+      <br/>help doc：See the source code for details.README.md<br>
       <ul>
-          <li>使用方式: 在标注了是MapperStruct维护的映射类中双击需要映射的方法然后鼠标右键选择弹出的MapStructMappingTool功能栏，即可弹出sourceObject和targetObject的类字段树，手动指明字段的映射关系，映射完毕后点击output按钮将自动生成的映射代码输出到对应的映射方法上方</li>
-          <li>使用场景: 需要维护MapStruct映射类时，需要手动编写字段映射关系，它或许能帮助你更便利或者更舒服的去做这些工作，
-              特别一些场景：
-              1.遇到字段含义相同但是字段命名不一样的情况我们需要在对应的类文件中来回跳转确认字段名，在回到映射维护类编写类似"@Mapping(source = "xxx", target = "xxx")的代码；
-              2.有很多字段需要你去编写映射关系，映射的目标属性和源属性的命名是一样，但是对应的字段层级所处位置较深，这时我们还要额外注意对应的层级关系是否正确
-              3.你的项目中可能强制不使用MapStruct的隐式装换能力
+          <li>How to use: Double-click the method that needs to be mapped in the mapping class marked as maintained by MapperStruct, then right-click to select the pop-up MapStructMappingTool function bar, and the class field tree of sourceObject and targetObject can pop up, manually specify the field mapping relationship, and click after mapping. The output button outputs the automatically generated mapping code above the corresponding mapping method</li>
+          <li>Usage scenario: When you need to maintain the MapStruct mapping class, you need to manually write the field mapping relationship. It may help you do these tasks more conveniently or more comfortably.
+               Some special scenarios:
+               1. When the meaning of the field is the same but the name of the field is different, we need to jump back and forth in the corresponding class file to confirm the field name, and write something like "@Mapping(source = "xxx", target = " xxx") code;
+               2. There are many fields that require you to write the mapping relationship. The target attribute of the mapping is named the same as the source attribute, but the corresponding field level is located in a deeper position. At this time, we should pay extra attention to whether the corresponding hierarchical relationship is correct.
+               3. Your project may be forced not to use MapStruct's implicit conversion capabilities
           </li>
-          <li>使用注意事项: 一定要是标注了@Mapper,目前只针对1->1的映射关系，暂时不支持1->n的映射关系</li>
+          <li>Precautions for use: It must be marked with @Mapper, currently only for the mapping relationship of 1->1, and the mapping relationship of 1->n is not supported for the time being.</li>
       </ul>
-      <br/>最后：如果遇到使用问题请联系本人，email="wutailong11062@hellobike.com"<br>
+      <br/>Finally: if you encounter problems with use, please contact me，email="wutailong11062@hellobike.com"<br>
     ]]></description>
 
   <change-notes><![CDATA[
       <h3>V1.0.0</h3>
-      <br/>内测版本发布<br>
+      <br/>Beta version released<br>
       <h3>V1.0.1</h3>
-      <br/>修改源码地址<br>
+      <br/>Add user guide<br>
     ]]>
   </change-notes>
 
