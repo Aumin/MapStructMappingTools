@@ -36,7 +36,7 @@ public class MappingAppWindows extends JPanel {
 
     private static JEditorPane editorPane;
 
-    private static final String MAPPING_RESULT_MODEL = "@Mapping(source = \"#s#\", target = \"#t#\")";
+    private static final String MAPPING_RESULT_MODEL = "@Mapping(target = \"#t#\", source = \"#s#\")";
 
     private static int selectCount = 0;
 
@@ -240,8 +240,16 @@ public class MappingAppWindows extends JPanel {
     }
 
     private static void createNodes(DefaultMutableTreeNode top, PsiClass psiClass, boolean startRoot) {
+        List<PsiField> fieldList = new ArrayList<>(Arrays.asList(psiClass.getFields()));
 
-        for (PsiField psiField : psiClass.getFields()) {
+        // super class fields
+        PsiClass superClass = psiClass.getSuperClass();
+        while (superClass != null && !Object.class.getCanonicalName().equals(superClass.getQualifiedName())) {
+            fieldList.addAll(Arrays.asList(superClass.getFields()));
+            superClass = superClass.getSuperClass();
+        }
+
+        for (PsiField psiField : fieldList) {
             // final不可修改不展示
             if (psiField.getModifierList() != null
                     && psiField.getModifierList().getText().contains("final")) {
