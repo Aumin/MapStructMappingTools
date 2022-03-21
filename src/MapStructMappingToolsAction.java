@@ -73,28 +73,28 @@ public class MapStructMappingToolsAction extends AnAction {
                                 Const.ERROR_TITLE);
                         return;
                     }
-                    source = Optional.ofNullable(parameter.getTypeElement())
+                    target = Optional.ofNullable(parameter.getTypeElement())
                             .map(PsiTypeElement::getInnermostComponentReferenceElement)
                             .orElseThrow()
                             .getQualifiedName();
                     continue;
                 }
 
-                target = Optional.ofNullable(parameter.getTypeElement())
+                source = Optional.ofNullable(parameter.getTypeElement())
                         .map(PsiTypeElement::getInnermostComponentReferenceElement)
                         .orElseThrow()
                         .getQualifiedName();
             }
 
             // 参数中没有@MappingTarget注解
-            if (StringUtils.isEmpty(source)) {
+            if (StringUtils.isEmpty(target)) {
                 if (method.getParameterList().getParameters().length > 1) {
                     Messages.showErrorDialog(actionEvent.getProject(),
                             Const.ERROR_MSG_2,
                             Const.ERROR_TITLE);
                     return;
                 }
-                source = Optional.ofNullable(returnTypeElement.getInnermostComponentReferenceElement()).map(PsiJavaCodeReferenceElement::getQualifiedName).orElseThrow();
+                target = Optional.ofNullable(returnTypeElement.getInnermostComponentReferenceElement()).map(PsiJavaCodeReferenceElement::getQualifiedName).orElseThrow();
             }
 
         }
